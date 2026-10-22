@@ -15,13 +15,19 @@ review-time (memory + docs)**.
 │   ├── hooks/
 │   │   ├── precode-checklist.sh           ← BLOCKS edits on main / master
 │   │   ├── responsive-classcheck.sh       ← BLOCKS bare grid-cols-N in tsx/jsx
-│   │   └── limit-bump-investigate-first.sh ← ADVISES on CI/IaC limit bumps (three-paths framework)
+│   │   ├── limit-bump-investigate-first.sh ← ADVISES on CI/IaC limit bumps (three-paths framework)
+│   │   ├── diagnose-before-code.sh        ← ADVISES: root-cause across seams before coding
+│   │   └── predeploy-reality-check.sh     ← ADVISES on deploy/migrate cmds (merged ≠ live, F4/F5)
 │   ├── commands/
-│   │   ├── ready-to-code.md               ← /ready-to-code — five-question gate
+│   │   ├── ready-to-code.md               ← /ready-to-code — eight-question gate (+ resume-from-compaction)
 │   │   └── ship.md                        ← /ship — lint → commit → merge → deploy
 │   └── references/
 │       ├── CODING-GUIDELINES.md           ← starter rules; expand per project
-│       └── three-paths.md                 ← decision-making framework for obstacles
+│       ├── three-paths.md                 ← decision-making framework for obstacles
+│       ├── File-Map.md                    ← TEMPLATE: path→purpose lookup (fill on init)
+│       ├── TECHSTACK.md                   ← TEMPLATE: what's used + running (fill on init)
+│       ├── CODING-GUIDELINES-SURFACE.template.md ← PATTERN: copy → CODING-GUIDELINES-<SURFACE>.md per scanned surface
+│       └── UI-DESIGN-SYSTEM.md            ← TEMPLATE: shipped UI SoT (fill on init / delete)
 ├── .githooks/                             ← per-machine git guardrails (activated by installer)
 │   ├── pre-commit                         ← runs check-pii.sh against staged content
 │   └── pre-push                           ← project-specific gates (smoke test, etc.)
@@ -35,6 +41,7 @@ review-time (memory + docs)**.
 ├── wiki/
 │   ├── README.md                           ← purpose of the wiki root
 │   ├── concepts/README.md                 ← purpose of concept docs
+│   ├── concepts/pipeline-and-deploy-reality.md ← seam diagnosis · merged≠live · F1–F5 catalog
 │   ├── incidents/README.md                ← purpose of incident writeups
 │   ├── sources/README.md                  ← purpose of source/reference files
 │   ├── assets/README.md                   ← purpose of asset storage

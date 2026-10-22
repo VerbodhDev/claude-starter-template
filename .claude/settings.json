@@ -28,6 +28,10 @@
           {
             "type": "command",
             "command": "bash __PROJECT_ROOT__/.claude/hooks/limit-bump-investigate-first.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash __PROJECT_ROOT__/.claude/hooks/diagnose-before-code.sh"
           }
         ]
       },
@@ -45,6 +49,10 @@
           {
             "type": "command",
             "command": "bash __PROJECT_ROOT__/.claude/hooks/limit-bump-investigate-first.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash __PROJECT_ROOT__/.claude/hooks/diagnose-before-code.sh"
           }
         ]
       },
@@ -62,6 +70,19 @@
           {
             "type": "command",
             "command": "bash __PROJECT_ROOT__/.claude/hooks/limit-bump-investigate-first.sh"
+          },
+          {
+            "type": "command",
+            "command": "bash __PROJECT_ROOT__/.claude/hooks/diagnose-before-code.sh"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash __PROJECT_ROOT__/.claude/hooks/predeploy-reality-check.sh"
           }
         ]
       }
